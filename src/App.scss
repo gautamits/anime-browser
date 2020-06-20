@@ -20,7 +20,7 @@ html, body {
 .list-container{
     display: grid;
     width: 100%;
-    grid-template-rows: 40px 40px 1fr;
+    grid-template-rows: 40px 40px 1fr 40px;
     padding: 16px 20px;
     height:100%;
     box-shadow: 4px 4px 25px 6px rgba(153,137,153,0.6);
@@ -117,4 +117,36 @@ form#searchForm{
         color:rgba(255,255,255,0.9);
         margin-left: 8px;
     }
+}
+
+ul.pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: unset;
+    padding-inline-start: unset;
+    min-width: 400px;
+}
+
+.pagination-container {
+    padding-top:12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.page-number {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background: #f5f5f5;
+    color: #171717;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    list-style: none;
+}
+
+li.page-number.active {
+    color: #e00000;
 }
