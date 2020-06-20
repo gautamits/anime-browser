@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
-import {loadAnime} from './reducers/animeReducer'
-import usePagination from './usePagination'
+import {loadAnime} from '../../reducers/animeReducer'
+import usePagination from '../../helpers/usePagination'
 import './App.scss'
 
 export default function App() {
