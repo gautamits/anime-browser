@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Search Anime",
+  "short_name": "Anime",
+  "theme_color": "#2156f3",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,5 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
   "background_color": "#ffffff"
 }
