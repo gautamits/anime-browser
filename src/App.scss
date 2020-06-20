@@ -1,0 +1,120 @@
+
+*{
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0; 
+    padding: 0; 
+    overflow-x:hidden;
+}
+.App {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background: linear-gradient(45deg , rgb(140, 106, 240), rgb(222, 81, 240));
+    overflow: hidden;
+    margin: 0;
+}
+
+.list-container{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 40px 40px 1fr;
+    padding: 16px 20px;
+    height:100%;
+    box-shadow: 4px 4px 25px 6px rgba(153,137,153,0.6);
+}
+
+@mixin flex($horizontal,
+$vertical) {
+    display: flex;
+    #{$horizontal}: center;
+    #{$vertical}: center;
+    &.left {
+        #{$horizontal}: flex-start;
+    }
+    &.right {
+        #{$horizontal}: flex-end;
+    }
+    &.top {
+        #{$vertical}: flex-start;
+    }
+    &.bottom {
+        #{$vertical}: flex-end;
+    }
+}
+
+.flex {
+    @include flex(justify-content,
+    align-items);
+    &.column {
+        @include flex(align-items,
+        justify-content);
+        flex-direction: column;
+    }
+}
+
+form#searchForm{
+    height: 40px;
+    width:100%;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    input{
+        width: 80%;
+        height: 100%;
+        border: unset;
+        font-size: 16px;
+        outline: unset;
+        padding: 0 16px;
+    }
+    button{
+        width: 20%;
+        height: 100%;
+        border: unset;
+    }
+}
+
+.card-container{
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 300px;
+    grid-gap:16px;
+}
+
+.card{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card--name{
+    position: absolute;
+    bottom:0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: white;
+    font-size: 20px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+.loading{
+    line-height: 40px;
+    .loading--heading{
+        color: rgba(255,255,255, 0.7);
+    }
+    .loading--url{
+        color:rgba(255,255,255,0.9);
+        margin-left: 8px;
+    }
+}
