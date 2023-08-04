@@ -23,7 +23,7 @@ function List({ ...props }) {
   const [searchString, setSearchString] = useState<string>("");
   const [inputText, setInputText] = useState<string>("");
   const simpleAction = React.useCallback(() => {
-    props.loadAnime(searchString, pageSize, currentPage);
+    loadAnime(searchString, pageSize, currentPage);
   }, [searchString, pageSize, currentPage, loadAnime])
 
   useEffect(() => {
