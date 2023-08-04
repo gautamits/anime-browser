@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/anime-browser/static/css/main.321f7699.chunk.css",
-    "main.js": "/anime-browser/static/js/main.1cf0349d.chunk.js",
-    "main.js.map": "/anime-browser/static/js/main.1cf0349d.chunk.js.map",
-    "runtime-main.js": "/anime-browser/static/js/runtime-main.5a4aa2e9.js",
-    "runtime-main.js.map": "/anime-browser/static/js/runtime-main.5a4aa2e9.js.map",
-    "static/js/2.15ef8c6c.chunk.js": "/anime-browser/static/js/2.15ef8c6c.chunk.js",
-    "static/js/2.15ef8c6c.chunk.js.map": "/anime-browser/static/js/2.15ef8c6c.chunk.js.map",
+    "main.css": "/anime-browser/static/css/main.d2450fe8.css",
+    "main.js": "/anime-browser/static/js/main.e93bf1df.js",
     "index.html": "/anime-browser/index.html",
-    "precache-manifest.cc87bb99224f892ed0c762e778748b2e.js": "/anime-browser/precache-manifest.cc87bb99224f892ed0c762e778748b2e.js",
-    "service-worker.js": "/anime-browser/service-worker.js",
-    "static/css/main.321f7699.chunk.css.map": "/anime-browser/static/css/main.321f7699.chunk.css.map",
-    "static/js/2.15ef8c6c.chunk.js.LICENSE.txt": "/anime-browser/static/js/2.15ef8c6c.chunk.js.LICENSE.txt"
+    "main.d2450fe8.css.map": "/anime-browser/static/css/main.d2450fe8.css.map",
+    "main.e93bf1df.js.map": "/anime-browser/static/js/main.e93bf1df.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.5a4aa2e9.js",
-    "static/js/2.15ef8c6c.chunk.js",
-    "static/css/main.321f7699.chunk.css",
-    "static/js/main.1cf0349d.chunk.js"
+    "static/css/main.d2450fe8.css",
+    "static/js/main.e93bf1df.js"
   ]
 }
