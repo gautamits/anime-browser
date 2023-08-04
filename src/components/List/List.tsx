@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { loadAnime } from "../../reducers/animeReducer";
 import usePagination from "../../helpers/usePagination";
 import {Pagination} from '../Pagination'
-import { simpleAction } from "../../reducers/simpleReducer";
 
 export default connect(
   (state) => ({
@@ -19,12 +18,13 @@ function List({ ...props }) {
     setCurrentPage,
     pages,
   } = usePagination({});
+  const {loadAnime} = props
 
   const [searchString, setSearchString] = useState<string>("");
   const [inputText, setInputText] = useState<string>("");
-  const simpleAction = React.useCallback(()=>{
+  const simpleAction = React.useCallback(() => {
     props.loadAnime(searchString, pageSize, currentPage);
-  }, [searchString, pageSize, currentPage, props.loadAnime])
+  }, [searchString, pageSize, currentPage, loadAnime])
 
   useEffect(() => {
     if (searchString) simpleAction();
