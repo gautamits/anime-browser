@@ -1,4 +1,3 @@
-import { ReducerAction, Dispatch } from "react";
 import { Action } from "redux";
 
 interface Action2 extends Action {

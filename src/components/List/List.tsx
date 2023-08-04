@@ -14,11 +14,8 @@ export default connect(
 function List({ ...props }) {
   const {
     pageSize,
-    setPageSize,
     currentPage,
     setCurrentPage,
-    goLeft,
-    goRight,
     pages,
   } = usePagination({});
 
@@ -30,7 +27,7 @@ function List({ ...props }) {
 
   useEffect(() => {
     if (searchString) simpleAction();
-  }, [searchString, pageSize, currentPage]);
+  }, [searchString, pageSize, currentPage, simpleAction]);
 
   function handleSubmit(event: any) {
     event.preventDefault();
