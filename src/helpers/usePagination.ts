@@ -1,10 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
-
-interface paginationProps {
-  pageSize?: number;
-  currentPage?: number;
-  pages?: any;
-}
+import React, { useState, useMemo } from "react";
 
 interface pagination {
   pageSize: number;
@@ -26,10 +20,10 @@ export default function usePagination({
   const [pageSize, setPageSize] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setPageSize(pageLength);
     setCurrentPage(activePage);
-  }, [currentPageLength, activePage]);
+  }, [currentPageLength, activePage, pageLength]);
 
   let pages = useMemo(() => {
     let pages: number[] = [];

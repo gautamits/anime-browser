@@ -14,23 +14,21 @@ export default connect(
 function List({ ...props }) {
   const {
     pageSize,
-    setPageSize,
     currentPage,
     setCurrentPage,
-    goLeft,
-    goRight,
     pages,
   } = usePagination({});
+  const {loadAnime} = props
 
   const [searchString, setSearchString] = useState<string>("");
   const [inputText, setInputText] = useState<string>("");
-  function simpleAction() {
-    props.loadAnime(searchString, pageSize, currentPage);
-  }
+  const simpleAction = React.useCallback(() => {
+    loadAnime(searchString, pageSize, currentPage);
+  }, [searchString, pageSize, currentPage, loadAnime])
 
   useEffect(() => {
     if (searchString) simpleAction();
-  }, [searchString, pageSize, currentPage]);
+  }, [searchString, pageSize, currentPage, simpleAction]);
 
   function handleSubmit(event: any) {
     event.preventDefault();
