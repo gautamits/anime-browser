@@ -5,7 +5,7 @@ interface Action2 extends Action {
   data?: Object;
 }
 
-export default (state = {}, action: Action2) => {
+export default function AnimeReducer(state = {}, action: Action2) {
   switch (action.type) {
     case "REQUEST":
       return {
